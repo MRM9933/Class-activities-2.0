@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <Title>RocK Paper Scissors Game</Title>
+    </head>
+    <body>
+        <H1>Rock Paper Scissors</H1>
+        <form>
+            <label for="User1">User 1:</label>
+            <input type="text" id="User1" name="User1"><br><br>
+            <label for="User2"> User 2:</label>
+            <input type="text" id="User2" name="User2"><br><br>
+            <button id="submit">Submit</button>
+          </form>
+    </body>
+
+    <script>
+let user1input = document.getElementById("User1").value
+let user2input = document.getElementById("User2").value
+
+let btn = document.getElementById("submit")
+
+btn.addEventListener("click", playgame)
+
+function playgame(){        
+         if (user1input === user2input){
+            return alert("its a draw")    
+        } 
+         if (user1input === "rock" && user2input === "scissors"){
+            return alert(user1input + " wins ")
+         }
+
+         if (user1input === "rock" && user2input === "paper"){
+             return alert(user2input + " wins ")
+         }
+
+         if (user1input === "scissors" && user2input === "paper"){
+             return alert(user1input + " wins ")
+         }
+
+         if (user1input === "scissors" && user2input === "rock"){
+             return alert(user2input + "wins")
+         }
+         
+         if (user1input === "paper" && user2input === "scissors"){
+             return alert(user2input + "wins")
+         }
+
+         if (user1input === "paper" && user2input === "rock"){
+             return alert(user1input + "wins")
+         }
+
+
+
+
+
+
+    }
+
+    
+
+
+    </script>
+</html>
+
